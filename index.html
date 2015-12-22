@@ -1,0 +1,2302 @@
+<html>
+<head>
+<link rel="stylesheet" href="normal1.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Crimson+Text' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<div id="fixed">
+
+<div id="input">
+	<h2>Using the Standard Normal Table</h2>
+
+	
+	<div id="choose">
+		<button id='Blt' class="math">P(Z&lt;z)</button>
+		<button id='Bgt' class="math">P(Z&gt;z)</button>
+		<button id='Bbet' class="math">P(a&lt;Z&lt;b)</button>
+	</div>
+	
+	<div id="intro" class="type">
+	<div class="result" id="intro2">
+	<p>The Normal Distribution is continuous so the probabilities are proportional to the area under the curve.</p>
+	<p>The total area under the curve = 1</p>
+	<p>The curve is symmetrical.</p>
+	<p>The table gives the cummulative probability i.e. <span class='math'>P(Z&lt;z)</span>
+	</div>
+	</div>
+	
+	<!----------------------------LOWER THAN--------------------------------------->
+	
+	<div id="lt" class="type">
+	
+		Find <span class="math"> P(Z&lt;</span>
+		<input type="text" id="LTval1" value="0.97" maxlength="5">
+		<span class="math"> )</span>
+		<button onclick="prob2()">Go</button> 
+		
+		<div id="ltPOS" class="result">
+			Here z is positive so read directly from the table.
+			=<span id="ltPOSr" class="math"></span>
+		</div>
+		
+		<div id="ltNEG" class="result">
+			Here z is negative.
+			<table class="mini">
+			<tbody>
+			<tr class="math">
+				<td>P(Z&lt;<span id="ltNEG1"></span>)</td>
+				<td>=P(Z&gt;<span id="ltNEG2"></span>)</td>
+				<td>=1-P(Z&lt;<span id="ltNEG3"></span>)</td>
+			</tr>
+			<tr>
+				<td>	
+				<div id="graph2" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath4182"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniLT1"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPath4182)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+				</td>
+				<td><div id="graph3" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath4182"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniLT2"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPath4182)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+	</td>
+				<td>	
+				<div id="graph4" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath4182"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniLT3"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPath4182)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			
+			<p class="math">=1-<span id="ltNEGr1"></span>=<span id="ltNEGr"></span></p>
+			
+			
+		</div>	
+	</div>
+	
+	<!----------------------------GREATER THAN--------------------------------------->
+	
+	<div id="gt" class="type">
+			Find <span class="math"> P(Z&gt;</span>
+		<input type="text" id="GTval1" value="-1.36" maxlength="5">
+		<span class="math"> )</span>
+		<button onclick="prob3()">Go</button> 
+		
+		<div id="gtPOS" class="result">
+			<table class="mini">
+			<tbody>
+			<tr class="math">
+				<td>P(Z&gt;<span id="gtPOS1"></span>)</td>
+				<td>=1-P(Z&lt;<span id="gtPOS2"></span>)</td>
+			</tr>
+			<tr>
+				<td>	
+				<div id="graph8" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath4182"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniGT1"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPath4182)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+				</td>
+				<td><div id="graph9" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath4182"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniGT2"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPath4182)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+	</td>
+			</tr>
+			</tbody>
+			</table>
+			<p class="math">=1-<span id="gtPOSr1"></span>=<span id="gtPOSr"></span></p>
+			
+		</div>
+		
+		<div id="gtNEG" class="result">
+			Here z is negative.
+			<table class="mini">
+			<tbody>
+			<tr class="math">
+				<td>P(Z&gt;<span id="gtNEG1"></span>)</td>
+				<td>=P(Z&lt;<span id="gtNEG2"></span>)</td>
+			</tr>
+			<tr>
+				<td>	
+				<div id="graph5" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPathGT1"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniGT3"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPathGT1)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+				</td>
+				<td><div id="graph6" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPathGT2"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniGT4"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPathGT2)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+	</td>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			
+			<p class="math">=<span id="gtNEGr"></span></p>
+			
+			
+		</div>	
+	</div>
+	
+	
+	<!----------------------------BETWEEN--------------------------------------->
+	
+	<div id="bet" class="type">
+	
+	Find <span class="math"> P(</span>
+	<input type="text" id="val1" value="-1" maxlength="5"><span class="math">&lt;Z&lt;</span>
+	<input type="text" id="val2" value="1.5" maxlength="5"><span class="math">)</span>
+	<button onclick="prob1()">Go</button> 
+	
+		<div id="bothPOS" class="math result">
+			P(Z&lt;<span id="bothPOS1"></span>)-P(Z&lt;<span id="bothPOS2"></span>)</br>
+			=<span id="bothPOSr2"></span>-<span id="bothPOSr1"></span>=<span id="bothPOSr"></span>
+			
+		</div>
+		
+		<div id="bothNEG" class="result">
+			<p><span class='math'>=P(Z&lt;b)-P(Z&lt;a)</span> Here both a and b are negative</p>
+						<table class="mini">
+			<tbody>
+			<tr class="math">
+				<td>=P(Z&lt;<span id="bothNEGb"></span>)-P(Z&lt;<span id="bothNEGa"></span>)</td>
+				<td>=P(Z&lt;<span id="bothNEG1"></span>)-P(Z&lt;<span id="bothNEG2"></span>)</td>
+			</tr>
+			<tr>
+				<td>	
+				<div id="graphBET1" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPathBET1"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniBET1"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPathBET1)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+				</td>
+				<td><div id="graphBET2" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPathBET2"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPathBE"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+	   id="miniBET2"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPathBET2)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+	</td>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			
+			<p class='math'>=<span id="bothNEGr2"></span>-<span id="bothNEGr1"></span>=<span id="bothNEGr"></span></p>
+			
+		</div>
+		
+		<div id="POSNEG" class="result">
+			<p><span class='math'>=P(Z&lt;b)-P(Z&lt;a)</span> Here a is negative.</p>			
+			<p class='math'>=P(Z&lt;b)-(1-P(Z&lt;|a|))</p>
+			<p class='math'>=P(Z&lt;<span id="POSNEG1"></span>)+P(Z&lt;<span id="POSNEG2"></span>)-1</p>
+			<p class='math'>=<span id="POSNEGr2"></span>+<span id="POSNEGr1"></span>-1=<span id="POSNEGr"></span></p>
+			
+		</div>
+
+	</div>
+	
+</div>
+
+<div id="graph">
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg2"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPath1"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         id="rect4184"
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="cliphash"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+		 x="361"
+         height="250"
+		 width="0"
+         id="rect4222"
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       id="rect4327"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="555"
+       id="prob2"
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 <rect
+       y="30.932024"
+       x="-890"
+       height="338.71277"
+       width="285"
+       id="prob1"
+       style="opacity:1;fill:#AE0000;fill-opacity:0.39215686;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	   
+	<!--hashed--->
+    <g
+       style="fill:#008080;fill-opacity:1"
+       clip-path="url(#cliphash)"
+       transform="matrix(1.1263818,-0.57431776,0.59542359,1.0864553,-1125.4193,-432.74071)"
+       id="g4253">
+      <path
+         id="rect4152"
+         d="m -344.60162,590.32477 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-0"
+         d="m -344.60162,616.89069 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-05"
+         d="m -344.60162,643.45654 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-7"
+         d="m -344.60162,696.58838 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-4"
+         d="m -344.60162,670.02246 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-6"
+         d="m -344.60162,723.1543 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-3"
+         d="m -344.60162,749.72021 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-5"
+         d="m -344.60162,776.28613 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-73"
+         d="m -344.60162,802.85205 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-62"
+         d="m -344.60162,829.41797 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-48"
+         d="m -344.60162,855.98383 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-07"
+         d="m -344.60162,882.54974 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-00"
+         d="m -344.60162,909.11566 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-31"
+         d="m -344.60162,935.68158 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-8"
+         d="m -344.60162,962.2475 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <path
+         id="rect4152-2"
+         d="m -344.60162,988.81342 854.52612,0 0,4 -854.52612,0 z"
+         style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+	
+	<!---borders--->
+    <rect
+       y="50.200081"
+       x="-338"
+       height="320"
+       width="5"
+       id="b1"
+       style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="47.636627"
+       x="-608"
+       height="320"
+       width="5"
+       id="b2"
+       style="opacity:1;fill:#008080;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       id="rect4359"
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPath1)"
+       id="rect4173"
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#f4e3d7;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text4228"
+       y="408.93021"
+       x="-798.19159"
+       <tspan
+         y="408.93021"
+         x="-798.19159"
+         id="tspan4230">-3</tspan>
+		 
+		 <tspan
+         y="408.93021"
+         x="-708.19159"
+         id="tspan4230">-2</tspan>
+		 
+		 <tspan
+         y="408.93021"
+         x="-618.19159"
+         id="tspan4230">-1</tspan>
+		 
+		 <tspan
+         y="408.93021"
+         x="-520"
+         id="tspan4230">0</tspan>
+		 
+		 <tspan
+         y="408.93021"
+         x="-430"
+         id="tspan4230">1</tspan>
+		 
+		 <tspan
+         y="408.93021"
+         x="-340"
+         id="tspan4230">2</tspan>
+		 
+		 <tspan
+         y="408.93021"
+         x="-250"
+         id="tspan4230">3</tspan>
+		 
+		 
+		 
+		 </text>
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       id="g4279">
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4232"
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4232-3"
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4232-35"
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4232-1"
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4232-4"
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4232-0"
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4232-2"
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+</div>
+
+
+</div> <!---end of #fixed--->
+
+
+<div id="tabcont">
+	<h2>Standard Normal Table</h2>
+	<div id="table">
+	<div id="graphtable" class='minigraph'>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg3"
+   viewBox="0 0 750.73819 403.98221"
+   height="100%"
+   width="100%">
+  <defs
+     id="defs4">
+    <clipPath
+       id="clipPathTAB"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         y="17.941273"
+         x="-887.73828"
+         height="409.75781"
+         width="746.44238"
+         
+          />
+    </clipPath>
+	<!---clippath hashed  x and width missing--->
+    <clipPath
+       id="clipPath4220"
+       clipPathUnits="userSpaceOnUse">
+      <rect
+         transform="matrix(0.88407862,0.46733819,-0.46733822,0.88407861,0,0)"
+         y="402"
+         height="250"
+         
+          />
+    </clipPath>
+  </defs>
+  
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  
+  <g
+     transform="translate(890.99921,-5.2128784)"
+     id="layer1">
+	 
+	    <rect
+       y="6.5933847"
+       x="-890.01331"
+       height="364.06549"
+       width="749"
+       
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	 
+	 <!---cum prob rectangles--->
+    
+    <rect
+       y="31.22267"
+       x="-890"
+       height="338.71274"
+       width="500"
+	   id="minitable"
+       
+       style="opacity:1;fill:#008080;fill-opacity:0.39215687;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.5254902" />
+	 
+	 
+	
+	   <!---axis--->
+    <rect
+       y="366.94434"
+       x="-890.99921"
+       height="5"
+       width="750"
+       
+       style="opacity:1;fill:#333;fill-opacity:1;stroke:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+	   
+	<!---bell curve--->
+    <path
+       transform="matrix(1.0047661,0,0,1.0419018,1.7082875,-13.480166)"
+       clip-path="url(#clipPathTAB)"
+       
+       d="m -905.56364,-5.9698892 0,364.2815792 98.09309,0 c 13.4276,-1.53461 26.00707,-3.58527 34.85461,-5.7842 43.38096,-10.78171 78.58989,-37.35474 112.19561,-84.68156 13.43484,-18.92026 24.18814,-36.1403 47.6705,-76.33268 40.10406,-68.64211 56.9485,-91.756249 76.24269,-104.61639 25.71351,-17.138792 47.50085,-8.954101 76.55649,28.76117 12.46282,16.17718 22.17272,31.4935 48.091,75.85522 23.48236,40.19238 34.23566,57.41242 47.6705,76.33268 33.60573,47.32682 68.81465,73.89985 112.19562,84.68156 8.84758,2.19894 21.43004,4.24959 34.85773,5.7842 l 93.66527,0 0,-364.2815792 -782.09311,0 z"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#333;stroke-width:3.79850292;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    
+ 
+ <!---axis markers--->
+	<g
+       transform="translate(2.854439,0)"
+       >
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-518.83258"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-428.95807"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-339.08347"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-249.20895"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-608.70715"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-698.58167"
+         y="370.51019" />
+      <rect
+         style="opacity:1;fill:#333;fill-opacity:1;stroke:#333;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         
+         width="1.4341682"
+         height="17.210018"
+         x="-788.45618"
+         y="370.51019" />
+    </g>
+  </g>
+</svg>
+
+			
+			</div>
+
+	</div>
+</div>
+
+
+
+<script>
+
+// table variables
+var norm="0.5000,0.5040,0.5080,0.5120,0.5160,0.5199,0.5239,0.5279,0.5319,0.5359,0.5398,0.5438,0.5478,0.5517,0.5557,0.5596,0.5636,0.5675,0.5714,0.5753,0.5793,0.5832,0.5871,0.5910,0.5948,0.5987,0.6026,0.6064,0.6103,0.6141,0.6179,0.6217,0.6255,0.6293,0.6331,0.6368,0.6406,0.6443,0.6480,0.6517,0.6554,0.6591,0.6628,0.6664,0.6700,0.6736,0.6772,0.6808,0.6844,0.6879,0.6915,0.6950,0.6985,0.7019,0.7054,0.7088,0.7123,0.7157,0.7190,0.7224,0.7257,0.7291,0.7324,0.7357,0.7389,0.7422,0.7454,0.7486,0.7517,0.7549,0.7580,0.7611,0.7642,0.7673,0.7704,0.7734,0.7764,0.7794,0.7823,0.7852,0.7881,0.7910,0.7939,0.7967,0.7995,0.8023,0.8051,0.8078,0.8106,0.8133,0.8159,0.8186,0.8212,0.8238,0.8264,0.8289,0.8315,0.8340,0.8365,0.8389,0.8413,0.8438,0.8461,0.8485,0.8508,0.8531,0.8554,0.8577,0.8599,0.8621,0.8643,0.8665,0.8686,0.8708,0.8729,0.8749,0.8770,0.8790,0.8810,0.8830,0.8849,0.8869,0.8888,0.8907,0.8925,0.8944,0.8962,0.8980,0.8997,0.9015,0.9032,0.9049,0.9066,0.9082,0.9099,0.9115,0.9131,0.9147,0.9162,0.9177,0.9192,0.9207,0.9222,0.9236,0.9251,0.9265,0.9279,0.9292,0.9306,0.9319,0.9332,0.9345,0.9357,0.9370,0.9382,0.9394,0.9406,0.9418,0.9429,0.9441,0.9452,0.9463,0.9474,0.9484,0.9495,0.9505,0.9515,0.9525,0.9535,0.9545,0.9554,0.9564,0.9573,0.9582,0.9591,0.9599,0.9608,0.9616,0.9625,0.9633,0.9641,0.9649,0.9656,0.9664,0.9671,0.9678,0.9686,0.9693,0.9699,0.9706,0.9713,0.9719,0.9726,0.9732,0.9738,0.9744,0.9750,0.9756,0.9761,0.9767,0.9772,0.9778,0.9783,0.9788,0.9793,0.9798,0.9803,0.9808,0.9812,0.9817,0.9821,0.9826,0.9830,0.9834,0.9838,0.9842,0.9846,0.9850,0.9854,0.9857,0.9861,0.9864,0.9868,0.9871,0.9875,0.9878,0.9881,0.9884,0.9887,0.9890,0.9893,0.9896,0.9898,0.9901,0.9904,0.9906,0.9909,0.9911,0.9913,0.9916,0.9918,0.9920,0.9922,0.9925,0.9927,0.9929,0.9931,0.9932,0.9934,0.9936,0.9938,0.9940,0.9941,0.9943,0.9945,0.9946,0.9948,0.9949,0.9951,0.9952,0.9953,0.9955,0.9956,0.9957,0.9959,0.9960,0.9961,0.9962,0.9963,0.9964,0.9965,0.9966,0.9967,0.9968,0.9969,0.9970,0.9971,0.9972,0.9973,0.9974,0.9974,0.9975,0.9976,0.9977,0.9977,0.9978,0.9979,0.9979,0.9980,0.9981,0.9981,0.9982,0.9982,0.9983,0.9984,0.9984,0.9985,0.9985,0.9986,0.9986,0.9987,0.9987,0.9987,0.9987,0.9988,0.9988,0.9989,0.9989,0.9989,0.9990,0.9990";
+var col=10;
+var row=31;
+
+//create table
+
+    var body = document.getElementsByTagName('body')[0];
+    var tbl = document.createElement('table');
+    tbl.style.width = '100%';
+    tbl.setAttribute('border', '0');
+    var tbdy = document.createElement('tbody');
+    for (var i = 0; i < row+1; i++) {
+	
+        var tr = document.createElement('tr');
+        for (var j = 0; j < col+1; j++) {
+				
+				var normsplit=norm.slice(((i-1)*col+(j-1))*7,((i-1)*col+(j-1))*7+6);
+                var td = document.createElement('td');
+				td.style.fontSize = '1.2vw';
+				td.setAttribute("id", "r"+i+"c"+j);
+					if (i!==0 && j!==0) {
+					td.appendChild(document.createTextNode(normsplit))				
+					}
+					else if (i!==0) {td.appendChild(document.createTextNode((i-1)/10))	}
+					else if(j!==0) {td.appendChild(document.createTextNode((j-1)/100))}
+					else {td.appendChild(document.createTextNode('z'))}
+				 	tr.appendChild(td)  
+        }
+        tbdy.appendChild(tr);
+    }
+    tbl.appendChild(tbdy);
+    //body.appendChild(tbl)
+	document.getElementById('table').appendChild(tbl);
+	
+//buttons
+
+$('#Blt').click(function() {
+	$('.type').css('display','none');
+	$('#lt').css('display','block');
+});
+
+$('#Bgt').click(function() {
+	$('.type').css('display','none');
+	$('#gt').css('display','block');
+});
+
+$('#Bbet').click(function() {
+	$('.type').css('display','none');
+	$('#bet').css('display','block');
+});
+
+
+
+
+
+	
+//between---------------------------------------------------------------------------
+function prob1() {
+    var val1 = document.getElementById("val1").value;
+	var v1=parseFloat(val1);
+	var v1abs=Math.round(Math.abs(v1)*100)/100;
+	var val2 = document.getElementById("val2").value;
+	var v2=parseFloat(val2);
+	var v2abs=Math.round(Math.abs(v2)*100)/100;
+	
+	
+	if (v1abs>3 || v2abs>3) {
+	alert("Please enter values between -3 and +3");
+	return;
+	}
+	if (v1>v2) {
+	alert("b must be bigger than a");
+	return;
+	}
+		
+	$('.result').hide();
+	$('td').css("background-color",'white');
+	
+	//hashed	
+	$("#rect4222").attr('x', 480+v1*70);
+	$("#rect4222").attr('width', (v2-v1)*70);
+	
+	//borders
+	$("#b1").css('display', 'block').attr('x', -518+v1*90);
+	$("#b2").css('display', 'block').attr('x', -518+v2*90);
+	
+	//probability rectangles
+	$("#prob1").attr('width', 375+v1*90);
+	$("#prob2").attr('width', 375+v2*90);
+	
+	var rowP1 = Math.floor(v1abs*10)+1;
+	var colP1 = Math.round((v1abs*10+1-rowP1)*10)+1;
+	var rP1 = "#r"+rowP1+"c0";
+	var cP1 = "#r0c"+colP1;
+	var cellP1= "r"+rowP1+"c"+colP1;
+	
+	var rowP2 = Math.floor(v2abs*10)+1;
+	var colP2 = Math.round((v2abs*10+1-rowP2)*10)+1;
+	var rP2 = "#r"+rowP2+"c0";
+	var cP2 = "#r0c"+colP2;
+	var cellP2= "r"+rowP2+"c"+colP2;
+		
+	
+	$('#'+cellP2).css("background-color","#9CCECE");		
+	$('#'+cellP1).css("background-color","#a37e7e");
+		
+	$("#prob2").hide().delay(500).fadeIn(2000);
+	$("#prob1").hide().delay(2500).fadeIn(2000);
+
+	
+	//results
+
+	var rt1 = document.getElementById(cellP1).innerHTML;
+	var r1=parseFloat(rt1);
+	var rt2 = document.getElementById(cellP2).innerHTML;
+	var r2=parseFloat(rt2);
+	
+	if (v1<0 && v2<0) {
+
+	$("#bothNEG").hide().fadeIn(500);
+					//<td>=P(Z&lt;<span id="bothNEGa"></span>)-P(Z&lt;<span id="bothNEGb"></span>)</td>
+	document.getElementById("bothNEGa").innerHTML = v1;
+	document.getElementById("bothNEGb").innerHTML = v2;
+	document.getElementById("bothNEG1").innerHTML = v1abs;
+	document.getElementById("bothNEG2").innerHTML = v2abs;
+	document.getElementById("bothNEGr1").innerHTML = rt2;
+	document.getElementById("bothNEGr2").innerHTML = rt1;
+	document.getElementById("bothNEGr").innerHTML = Math.round((r1-r2)*1000)/1000;
+	
+	$("#miniBET1").attr('x', -890+375+v1*90);
+	$("#miniBET1").attr('width', (v1abs-v2abs)*90);
+	$("#miniBET2").attr('x', -890+375+v2abs*90);
+	$("#miniBET2").attr('width', (v1abs-v2abs)*90);
+	
+	}
+	
+	else if (v1<0){
+	
+	$("#POSNEG").hide().fadeIn(500);
+	document.getElementById("POSNEG1").innerHTML = v2;
+	document.getElementById("POSNEG2").innerHTML = v1abs;
+	
+	document.getElementById("POSNEGr1").innerHTML = rt1;
+	
+	document.getElementById("POSNEGr2").innerHTML = rt2;
+	document.getElementById("POSNEGr").innerHTML = Math.round((r2+r1-1)*1000)/1000;
+	}
+	
+	else {
+	
+	$("#bothPOS").hide().fadeIn(500);
+	document.getElementById("bothPOS1").innerHTML = v2;
+	document.getElementById("bothPOS2").innerHTML = v1;
+	
+	document.getElementById("bothPOSr1").innerHTML = rt1;
+	
+	document.getElementById("bothPOSr2").innerHTML = rt2;
+	document.getElementById("bothPOSr").innerHTML = Math.round((r2-r1)*1000)/1000;
+	}	
+}
+
+// less than----------------------------------------------------------------
+function prob2() {
+	var val1 = document.getElementById("LTval1").value;
+	var v1=parseFloat(val1);
+	var v1abs=Math.round(Math.abs(v1)*100)/100;
+	
+	if (v1abs>3) {
+	alert("Please enter values between -3 and +3");
+	return;
+	}
+
+	$('.result').hide();
+	$('td').css("background-color",'white');
+	
+	//hashed	
+	$("#rect4222").attr('x', 200);
+	$("#rect4222").attr('width', 280+(v1)*70);
+	
+	//borders
+	
+	$("#b2").css('display', 'block').attr('x', -518+v1*90);
+	$("#b1").css('display', 'none');
+	
+	//probability rectangles
+	$("#prob2").attr('width', 375+v1*90);
+	$("#prob1").attr('width', 0);
+	
+	var rowP1 = Math.floor(v1abs*10)+1;
+	var colP1 = Math.round((v1abs*10+1-rowP1)*10)+1;
+	var rP1 = "#r"+rowP1+"c0";
+	var cP1 = "#r0c"+colP1;
+	var cellP1= "r"+rowP1+"c"+colP1;
+	var rt1 = document.getElementById(cellP1).innerHTML;
+	var r1=parseFloat(rt1);
+
+	$("#prob2").hide().fadeIn(2000);
+		
+	$('#'+cellP1).css("background-color","#9CCECE");
+	
+	//results 
+	
+	if (v1<0) {
+	
+	$("#ltNEG").hide().fadeIn(500);
+	
+	$("#miniLT1").attr('width', 375+v1*90);
+	$("#miniLT2").attr('x', -890+375+v1abs*90);
+	$("#miniLT2").attr('width', 375-v1abs*90);
+	$("#miniLT3").attr('width', 375+v1abs*90);
+	
+	//<p class="math"> P(Z&lt;<span id="ltNEG1"></span>=P(Z&gt;<span id="ltNEG2"></span>)=1-P(Z&lt;<span id="ltNEG3"></span>)</p>
+	document.getElementById("ltNEG1").innerHTML = v1;
+	document.getElementById("ltNEG2").innerHTML = v1abs;
+	document.getElementById("ltNEG3").innerHTML = v1abs;
+	//<p class="math">=1-<span id="ltNEGr1"></span>=<span id="ltNEGr"></span></p>
+	document.getElementById("ltNEGr1").innerHTML = r1;
+	document.getElementById("ltNEGr").innerHTML = Math.round((1-r1)*1000)/1000;
+	}
+
+	else {
+	
+	$("#ltPOS").hide().fadeIn(500);
+	document.getElementById("ltPOSr").innerHTML = rt1;
+	
+	}
+}
+
+// greater than---------------------------------------------------------------------
+function prob3() {
+	var val1 = document.getElementById("GTval1").value;
+	var v1=parseFloat(val1);
+	var v1abs=Math.round(Math.abs(v1)*100)/100;
+	
+	if (v1abs>3) {
+	alert("Please enter values between -3 and +3");
+	return;
+	}
+
+	$('.result').hide();
+	$('td').css("background-color",'white');
+	
+	//hashed	
+	$("#rect4222").attr('x', 480+v1*70);
+	$("#rect4222").attr('width', 280-(v1)*70);
+	
+	//borders
+	
+	$("#b2").css('display', 'block').attr('x', -518+v1*90);
+	$("#b1").css('display', 'none');
+	
+	//probability rectangles
+	
+	$("#prob1").attr('width', 0);
+	
+	var rowP1 = Math.floor(v1abs*10)+1;
+	var colP1 = Math.round((v1abs*10+1-rowP1)*10)+1;
+	var rP1 = "#r"+rowP1+"c0";
+	var cP1 = "#r0c"+colP1;
+	var cellP1= "r"+rowP1+"c"+colP1;
+	var rt1 = document.getElementById(cellP1).innerHTML;
+	var r1=parseFloat(rt1);
+
+	$("#prob2").hide().fadeIn(2000);	
+	$('#'+cellP1).css("background-color","#9CCECE");
+	
+	//results
+	if (v1<0) {
+	
+	$("#gtNEG").hide().fadeIn(500);
+	$("#miniGT4").attr('width', 375+v1abs*90);
+	$("#miniGT3").attr('x', -890+375+v1*90);
+	$("#miniGT3").attr('width', 375+v1abs*90);
+	$("#prob2").attr('width', 375+v1abs*90);
+	
+	
+	document.getElementById("gtNEG1").innerHTML = v1;
+	document.getElementById("gtNEG2").innerHTML = v1abs;
+	document.getElementById("gtNEGr").innerHTML = r1;
+	
+	}
+
+	else {
+	
+	$("#gtPOS").hide().fadeIn(500);
+	document.getElementById("gtPOS1").innerHTML = v1;
+	document.getElementById("gtPOS2").innerHTML = v1;
+	document.getElementById("gtPOSr1").innerHTML = rt1;
+	document.getElementById("gtPOSr").innerHTML = Math.round((1-r1)*1000)/1000;
+	$("#miniGT2").attr('width', 375+v1*90);
+	$("#miniGT1").attr('x', -890+375+v1abs*90);
+	$("#miniGT1").attr('width', 375-v1abs*90);
+	$("#prob2").attr('width', 375+v1abs*90);
+	
+	
+	}
+}
+</script>
+
+</body>
+</html>
